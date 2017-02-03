@@ -13,8 +13,8 @@ data_matrix <- matrix(round(rexp(64)*1000), nrow = 8, ncol = 8)
 
 law_benford <- function(x, statistic = "Both"){
    first_digit <- NULL
-   for(j in 1:length(data)){
-      first_digit[j]  <-as.numeric(unlist(strsplit(as.character(data),"")[[j]][1]))
+   for(j in 1:length(x)){
+      first_digit[j]  <-as.numeric(unlist(strsplit(as.character(x),"")[[j]][1]))
    }
    distribution <- NULL
    equation_term <- NULL
